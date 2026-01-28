@@ -191,7 +191,7 @@ img {
 }
 
 .site-name {
-	margin-top: 30px;   /* 数值越大，向下移得越多 */
+	margin-top: 100px;   /* 数值越大，向下移得越多 */
 	margin-bottom: 0;   /* 确保其他方向依然为0 */
 	margin-left: 0;
 	margin-right: 0;
@@ -207,7 +207,7 @@ img {
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
-  font-size: 16px;
+  font-size: 18px;
 
   @include mobile {
     margin: 3px 0;
