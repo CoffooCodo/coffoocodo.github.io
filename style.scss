@@ -257,11 +257,6 @@ nav {
 
 .post {
 	p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
     margin: 10px 0;
 	}
   blockquote {
@@ -272,6 +267,14 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
+
+.posts > .post p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	}
 
   .comments {
     margin-top: 10px;
