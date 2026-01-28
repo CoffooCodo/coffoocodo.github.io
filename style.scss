@@ -1,0 +1,352 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+	background: $white;
+  font: 18px/1.4 $helvetica;
+  color: $darkGray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $helveticaNeue;
+  color: $darkerGray;
+  font-weight: bold;
+
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+	cursor: pointer;
+  &:hover, &:active {
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: italic;
+  color: $gray;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $lightGray;
+}
+::selection {
+  color: $black;
+  background: $lightGray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+  margin-bottom: 50px;
+}
+
+.masthead {
+  padding: 20px 0;
+  border-bottom: 1px solid $lightGray;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.site-avatar {
+  float: left;
+  width: 125px;
+  height: 125px;
+  margin-right: 20px;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+.site-info {
+  float: left;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-name {
+	margin-top: 57px;   /* 数值越大，向下移得越多 */
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+  
+	color: $darkGray;
+	cursor: pointer;
+	font-family: $helveticaNeue;
+	font-weight: 300;
+	font-size: 31px;
+	letter-spacing: 1.5px;
+}
+
+.site-description {
+  margin: -5px 0 0 0;
+  color: $gray;
+  font-size: 20px;
+
+  @include mobile {
+    margin: 0;
+  }
+}
+
+nav {
+	float: right;
+	margin-top: 100px; // @TODO: Vertically middle align
+	font-family: $helveticaNeue;
+	font-size: 22px;
+	text-decoration: underline;
+
+  @include mobile {
+    float: none;
+    margin-top: 9px;
+    display: block;
+    font-size: 25px;
+  }
+
+  a {
+    margin-left: 20px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $blue;
+    }
+  }
+}
+
+//
+// .main
+//
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+	color: #888888;      /* 灰色，你可以根据喜好调整深浅 */
+	font-weight: bold;   /* 加粗 */
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.wrapper-footer {
+	margin: 50px auto 0; /* margin-top 保持 50px，auto 让整体居中 */
+	border-top: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+	background-color: $lightGray;
+}
+
+footer {
+	padding: 5px 0;
+	text-align: center;
+	.copyright {
+    font-size: 14px;      /* 字号稍微小一点，显得更精致 */
+    color: $gray;         /* 使用灰色，不喧宾夺主 */
+    margin-bottom: 10px;  /* 如果放在图标上方，加点间距 */
+    font-family: $helveticaNeue;
+  }
+}
+
+/**************/
+/* 滚动条布局 */
+/**************/
+
+html, body {
+  height: 100%;       /* 强制占据整个屏幕高度 */
+  margin: 0;
+  overflow: hidden;    /* 禁止最外层窗口滚动 */
+  display: flex;
+  flex-direction: column; /* 垂直排列页头、主体、页脚 */
+}
+
+#main {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;       /* 让容器宽度撑满，滚动条就会在最右边 */
+  padding: 20px 0;   
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 让内部内容依然保持居中 */
+}
+
+/* 固定在底部的容器 */
+.wrapper-footer {
+  flex-shrink: 0;      /* 防止底部被压缩 */
+  margin-top: 0;       /* 既然固定了，就不需要上边距了 */
+  width: 100%;
+}
+
+#main::-webkit-scrollbar {
+  width: 8px;
+}
+#main::-webkit-scrollbar-thumb {
+  background: #ccc;      /* 滚动条滑块颜色 */
+  border-radius: 10px;
+}
+#main::-webkit-scrollbar-track {
+  background: transparent; /* 滚动条轨道透明 */
+}
+
+@include mobile {
+  html, body {
+    overflow: auto;    /* 手机端建议恢复正常滚动，体验更好 */
+    height: auto;
+  }
+  #main {
+    overflow-y: visible;
+  }
+}
+
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";
