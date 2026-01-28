@@ -165,8 +165,8 @@ img {
 
 .site-avatar {
   float: left;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin-right: 20px;
 
   @include mobile {
@@ -191,7 +191,7 @@ img {
 }
 
 .site-name {
-	margin-top: 0;   /* 数值越大，向下移得越多 */
+	margin-top: 15;   /* 数值越大，向下移得越多 */
 	margin-bottom: 0;
 	margin-left: 0;
 	margin-right: 0;
