@@ -193,7 +193,11 @@ img {
 	margin-bottom: 0;
 	margin-left: 0;
 	margin-right: 0;
-  
+
+@include mobile {
+	margin-top: 10px; /* 专门为手机端设置较小的间距，你可以根据喜好调成 5px 或 15px */
+	}
+	
 	color: $darkGray;
 	cursor: pointer;
 	font-family: $helveticaNeue;
