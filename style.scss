@@ -254,6 +254,12 @@ nav {
   border-bottom: 1px solid $lightGray;
 }
 
+.post h1 {
+	font-size: 22px;   /* 字号改为 22px，你可以根据视觉效果微调 */
+	margin-top: 10px;  /* 缩小标题上方的空隙 */
+	margin-bottom: 5px; /* 缩小标题下方的空隙 */
+}
+
 .posts > .post p {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
