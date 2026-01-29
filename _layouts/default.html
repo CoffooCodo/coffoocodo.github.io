@@ -52,20 +52,22 @@
 
     {% include analytics.html %}
   
-  <button id="backToTop" title="Go to top">↑</button>
+  <button id="backToTop" title="Go to top">
+    <svg viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+    </svg>
+  </button>
   <script>
-    // 获取按钮
     var mybutton = document.getElementById("backToTop");
-        // 当用户向下滚动 200px 时，显示按钮
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        mybutton.style.display = "block";
+    // 控制显示逻辑
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        mybutton.style.display = "flex"; // 使用 flex 确保内部图标居中
       } else {
         mybutton.style.display = "none";
       }
-    }
-    // 点击按钮时，跳转到页面顶部
+    };
+    // 平滑滚动回顶部
     mybutton.onclick = function() {
       window.scrollTo({top: 0, behavior: 'smooth'});
     };
