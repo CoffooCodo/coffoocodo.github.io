@@ -383,40 +383,49 @@ html, body {
 /**************/
 /* 手机端向上箭头设置 */
 /**************/
-
 #backToTop {
-  display: none; /* 默认隐藏 */
-  position: fixed; /* 固定定位 */
-  bottom: 20px; /* 距离底部 20px */
-  right: 20px; /* 距离右侧 20px */
-  z-index: 99; /* 确保在最顶层 */
+  display: none;       /* 初始隐藏 */
+  position: fixed;     /* 固定在页面上 */
+  bottom: 25px;        /* 距离底部距离 */
+  right: 25px;         /* 距离右侧距离 */
+  z-index: 999;        /* 确保在最上层 */
+  width: 50px;         /* 按钮宽度 */
+  height: 50px;        /* 按钮高度 */
+  border-radius: 50%;  /* 圆形 */
   border: none;
-  outline: none;
-  background-color: #333; /* 按钮背景色 */
-  color: white; /* 箭头颜色 */
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+  color: #fff;         /* 箭头颜色 */
   cursor: pointer;
-  padding: 15px;
-  border-radius: 50%; /* 圆形按钮 */
-  font-size: 18px;
-  width: 50px;
-  height: 50px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-  transition: opacity 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  
+  /* 关键：让内部 SVG 图标变大并完美居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#backToTop svg {
+  width: 32px;         /* 显著增大箭头尺寸 */
+  height: 32px;
+  fill: currentColor;
 }
 
 #backToTop:hover {
-  background-color: #555; /* 悬停颜色 */
+  background-color: #000;    /* 悬停时全黑 */
+  transform: translateY(-3px); /* 悬停时微向上浮动，增加反馈感 */
 }
-/* 针对移动端优化：如果只想在小屏幕更明显，可以调整大小 */
+
+/* 针对小屏幕（手机端）的微调 */
 @media screen and (max-width: 480px) {
   #backToTop {
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
     width: 45px;
     height: 45px;
-    padding: 10px;
   }
 }
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
