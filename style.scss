@@ -434,9 +434,8 @@ html, body {
 /*******************************/
 // 
 @include mobile {
-  // 这种写法假设 Jekyll 在生成的 body 标签上没有自动加类
-  // 我们通过探测页面中是否存在 article.post 来决定是否隐藏 footer
-  body:has(.post) .wrapper-footer {
+  // 只有检测到单个文章页特有的类名时，才隐藏 footer
+  body:has(.is-single-post) .wrapper-footer {
     display: none !important;
   }
 }
