@@ -434,9 +434,9 @@ html, body {
 /*******************************/
 // 
 @include mobile {
-  // 当 body 拥有 layout-post 类，或者 article 拥有 .post 类时
-  // 这里的选择器逻辑是：如果页面中存在 .post 元素，则隐藏其后的页脚容器
-  .post ~ .wrapper-footer {
+  // 这种写法假设 Jekyll 在生成的 body 标签上没有自动加类
+  // 我们通过探测页面中是否存在 article.post 来决定是否隐藏 footer
+  body:has(.post) .wrapper-footer {
     display: none !important;
   }
 }
