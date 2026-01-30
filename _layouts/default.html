@@ -3,7 +3,8 @@
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  /*引入图标库*/
+    
     {% include meta.html %}
 
     <!--[if lt IE 9]>
@@ -28,10 +29,11 @@
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/">Home</a>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
             <a href="https://scholar.google.com/citations?hl=zh-CN&user=EgQjfQsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Scholar</a>
-            <a href="https://orcid.org/0000-0002-4321-8523" target="_blank">ORCID</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=EgQjfQsAAAAJ&view_op=list_works&sortby=pubdate"><i class="fas fa-graduation-cap"></i> Scholar</a>
+            <a href="https://orcid.org/0000-0002-4321-8523"><i class="fab fa-orcid"></i> ORCID</a>
+            <a href="/about/"><i class="fas fa-user"></i> About</a>
           </nav>
           
         </header>
