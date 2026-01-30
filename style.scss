@@ -229,7 +229,7 @@ nav {
     justify-content: center;
     margin-top: 9px;
     display: block;
-    font-size: 25px;
+    font-size: 24px;
   }
 
   a {
@@ -241,7 +241,7 @@ nav {
 	text-decoration: underline;
 
     @include mobile {
-		margin: 0 10px;
+		margin: 0 8px;
 		color: $blue;
 		font-size: 18px;
     }
