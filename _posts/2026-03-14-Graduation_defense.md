@@ -7,6 +7,7 @@ title: 今日博士毕业答辩
      
   自2021年9月到2026年3月，四年半的时间：那美好的仗，我已经打过了；该跑的路程，我已经跑尽了。
   
-  <div align="center">
+<!--  <div align="center">
     <img src="/images/post/2026-03-14-Graduation_defense.jpg" width="800">
   </div>
+-->
